@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    
+<title>Currency Converter</title>
+
+</head>
+
+<body bgcolor1 ="sky blue">
+    
+<table align1 ="center" >
+    
+<tr>
+    
+<td  bgcolor1 ="red">
+    
+<h1>Currency Converter </h1></td>
+
+</tr>
+
+<tr>
+    
+<td bgcolor1 ="pink">
+    
+<marquee><h3>Welcome to online Currency Converter</h3></td></marquee>
+
+</tr>
+
+</Table>
+
+<form name="currency_converter">
+    
+
+<table align1 
+="center" border1="3">
+    
+<tr><td  colspan="2">BD Currency (Taka) : 
+  <input id="inputcurrency" type="number" name ="rupees"> 
+  <input  type="button" name ="Convert" Value = "Convert" onclick="currencyConverter(currency_converter.rupees.value)"></td></tr>
+
+  
+<tr>
+    
+<td> Dollar (American): </td>
+<td><input id="dollar"> </td>
+</tr>
+<tr>
+<td> Yuan (China):</td>
+<td><input id="yuan"></td>
+</tr>
+<tr>
+<td> Won (Korea): </td>
+<td><input id="won"></td>
+</tr>
+<tr>
+<td> Riyal (Saudia):</td>
+<td> <input id="riyal"></td></tr>
+<tr>
+<td> Dinar (Kuwait): </td>
+<td><input id="dinar"></td></tr>
+<tr>
+<td><input type="reset"  name="reset" Value="Reset Form"></td>
+</tr>
+<tr>
+<td colspan="2">You Can Press Reset Button for resetting the form</td>
+</tr>
+</Table>
+</form>
+<script>
+function currencyConverter(valuenumber) {
+if(currency_converter.rupees.value <= 0)
+window.alert("Enter value Greater than 0");
+else
+{
+   document.getElementById("dollar").value=(valuenumber/84.720).toFixed(2);
+  document.getElementById("yuan").value=(valuenumber/12.95731).toFixed(2)
+  document.getElementById("won").value=(valuenumber/ 0.0760).toFixed(2)
+  document.getElementById("riyal").value=(valuenumber/22.553637).toFixed(2)
+   document.getElementById("dinar").value=(valuenumber/224.85).toFixed(2)
+}
+ }
+</script>
+
+</body>
+</html>
